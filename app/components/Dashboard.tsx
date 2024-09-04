@@ -55,8 +55,8 @@ const utils = {
       documentation: "bg-purple-500/20 text-purple-500",
       performance: "bg-orange-500/20 text-orange-500",
       "ui/ux": "bg-green-500/20 text-green-500",
-    };
-    return colors[tag.toLowerCase()] || "bg-gray-500/20 text-gray-400";
+    } as const;
+    return colors[tag.toLowerCase() as keyof typeof colors] || "bg-gray-500/20 text-gray-400";
   },
   isDateSoon: (dateString: string) => {
     const today = new Date();
