@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.glow {
+  animation: move 5s linear infinite;
+  offset-path: rect(0% auto 100% auto);
+  background: radial-gradient(#ffff00, #ffd700, transparent);
+}
